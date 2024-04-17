@@ -3,7 +3,7 @@
 ## Optimizing Stock Market Predictions with Hybrid Deep Learning Architectures
 
 ## 0. Updates
-Alan: Found new links for SCI data; Write BI-LSTM forward function
+Alan: Write template for model training in BI-LSTM.ipynb
 
 ## 1. Data Preprocessing
 
@@ -38,9 +38,16 @@ BI-LSTM code explained: https://www.youtube.com/watch?v=jGst43P-TJA
 
 Whole stock prediction LSTM model code explained: https://www.youtube.com/watch?v=q_HS4s1L8UI
 
-Wrote first draft of BI-LSTM forward function. Questions:
+Questions:
 - use two BI-LSTM, dropout layer, and ReLU layer exactly as in the paper?
 - will we train using solely BI-LSTM, or plug it directly into CNN-BI-LSTM? If yes, what hyperparameter/ structure to use?
+
+Best Shot:
+Train RMSE: 0.040643; Test RMSE 38.340305
+
+Train  MAE: 0.023417; Test  MAE 26.461379
+
+Train  R^2: 0.998348; Test  R^2 0.967867
 
 
 ### CNN-BI-LSTM
