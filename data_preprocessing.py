@@ -5,23 +5,23 @@ import torch
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 
-def create_sequences(data, time_steps=10):
+def create_sequences(data, timestep=10):
     """
-    Create sequences of time_steps length and corresponding targets from standardized data.
+    Create sequences of timestep length and corresponding targets from standardized data.
 
     Parameters:
     data (array-like): Input two-dimensional standardized data (num_samples, num_features).
-    time_steps (int): The size of the time step sequences.
+    timestep (int): The size of the time step sequences.
     n_features (int): The number of features in each time step.
 
     Returns:
     X, y: Tuple of numpy arrays
-          X is three-dimensional data of shape (None, time_steps, n_features) for the CNN-LSTM input.
+          X is three-dimensional data of shape (None, timestep, n_features) for the CNN-LSTM input.
           y is a one-dimensional array of targets, which are the next values following each sequence.
     """
     X = []
-    for i in range(len(data) - time_steps + 1):
-        X.append(data[i:i + time_steps, : ])
+    for i in range(len(data) - timestep + 1):
+        X.append(data[i:i + timestep, : ])
     
     return np.array(X)
 
@@ -46,6 +46,9 @@ def get_data(
     # Read data
     raw_df = pd.read_csv(path, index_col=0)
 
+    if train_size <= 1:
+        train_size = int(train_size * len(raw_df))
+    
     # Split X into train and test
     X_train = raw_df.iloc[:train_size]
     X_test = raw_df.iloc[train_size:]
@@ -57,8 +60,8 @@ def get_data(
     X_test_stand = X_scaler.transform(X_test)
 
     # Convert into time-sequence
-    X_train_stand = create_sequences(X_train_stand)
-    X_test_stand = create_sequences(X_test_stand)[: -1, : , : ]
+    X_train_stand = create_sequences(X_train_stand, timestep = timestep)
+    X_test_stand = create_sequences(X_test_stand, timestep = timestep)[: -1, : , : ]
 
     # Split y into train and test
     y_train = raw_df[y_name].iloc[timestep : train_size + 1]
