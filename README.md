@@ -38,20 +38,25 @@ BI-LSTM code explained: https://www.youtube.com/watch?v=jGst43P-TJA
 
 Whole stock prediction LSTM model code explained: https://www.youtube.com/watch?v=q_HS4s1L8UI
 
-Questions:
-- use two BI-LSTM, dropout layer, and ReLU layer exactly as in the paper?
-- will we train using solely BI-LSTM, or plug it directly into CNN-BI-LSTM? If yes, what hyperparameter/ structure to use?
+Best Shot: (20 epoch, 0.0001 learning rate, 1 layer of BILSTM with hidden size 64, 2 layers of fc 128-16(ReLU)-1)
 
-Best Shot:
 Train RMSE: 0.040643; Test RMSE 38.340305
 
 Train  MAE: 0.023417; Test  MAE 26.461379
 
 Train  R^2: 0.998348; Test  R^2 0.967867
 
+### CNN-LSTM
+
 
 ### CNN-BI-LSTM
+best shot: (100 epoch, 0.0001 learning rate, CNN 8-32, 1 layer of BILSTM with hidden size 64, 2 layers of fc 128-16(ReLU)-1)
 
+Train RMSE: 0.040718; Test RMSE 43.307657
+
+Train  MAE: 0.024318; Test  MAE 30.802969
+
+Train  R^2: 0.998337; Test  R^2 0.956623
 …
 
 ## 3. Evaluation
@@ -65,5 +70,5 @@ Train  R^2: 0.998348; Test  R^2 0.967867
 …
 
 ### Paper (05.06)
-
+https://docs.google.com/document/d/16VK6Izbv6z5EJqd9hq8OhnQ2iOai019pXy7xmgFr7mQ/edit?usp=sharing
 …
