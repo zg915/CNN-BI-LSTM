@@ -97,6 +97,36 @@ Train  MAE: 0.023319; Test  MAE 27.128253
 
 Train  R^2: 0.998364; Test  R^2 0.966312
 
+### Generalization: LSTM, BILSTM, CNN-BI-LSTM, CNN-LSTM with the new data
+LSTM:  
+Train RMSE: 0.025027; Test RMSE 599.897397
+
+Train  MAE: 0.014560; Test  MAE 534.961372
+
+Train  R^2: 0.999376; Test  R^2 -44.130090
+
+
+BILSTM:  
+Train RMSE: 0.024088; Test RMSE 468.155902
+
+Train  MAE: 0.014494; Test  MAE 419.597945
+
+Train  R^2: 0.999417; Test  R^2 -8.082431
+
+CNN-LSTM:  
+Train RMSE: 0.025218; Test RMSE 580.451590
+
+Train  MAE: 0.015143; Test  MAE 518.704204
+
+Train  R^2: 0.999371; Test  R^2 -32.904019
+
+
+CNN-BILSTM:  
+Train RMSE: 0.024108; Test RMSE 458.144489
+
+Train  MAE: 0.016157; Test  MAE 405.629234
+
+Train  R^2: 0.999416; Test  R^2 -8.471478
 
 
 ### LSTM, BILSTM, CNN-BI-LSTM, CNN-LSTM with the new split
