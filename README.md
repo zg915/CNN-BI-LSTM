@@ -61,8 +61,41 @@ Train  R^2: 0.998337; Test  R^2 0.956623
 
 ## 3. Evaluation
 
-…(model comparison, hyperparameter tuning, different dataset)
+### Comparsion between LSTM and BI-LSTM on same parameter number
+#### LSTM 64 hidden layer = BI-LSTM 32 hidden layer
 
+LSTM:
+
+Train RMSE: 0.041400; Test RMSE 40.406074
+
+Train  MAE: 0.024093; Test  MAE 28.328293
+
+Train  R^2: 0.998291; Test  R^2 0.964189
+
+BI-LSTM:
+
+Train RMSE: 0.042824; Test RMSE 40.418164
+
+Train  MAE: 0.024424; Test  MAE 27.713295
+
+Train  R^2: 0.998167; Test  R^2 0.964581
+
+#### LSTM 128 hidden layer = BI-LSTM 64 hidden layer
+LSTM:
+
+Train RMSE: 0.040112; Test RMSE 39.808764
+
+Train  MAE: 0.023203; Test  MAE 28.302415
+
+Train  R^2: 0.998395; Test  R^2 0.963594
+
+BI-LSTM:
+
+Train RMSE: 0.040568; Test RMSE 39.166940
+
+Train  MAE: 0.023319; Test  MAE 27.128253
+
+Train  R^2: 0.998364; Test  R^2 0.966312
 ## 4. Report
 
 ### Poster (04.30)
