@@ -196,6 +196,6 @@ Train  R^2: 0.999532; Test  R^2 0.999567
 
 …
 
-### Paper (05.06)
-https://docs.google.com/document/d/16VK6Izbv6z5EJqd9hq8OhnQ2iOai019pXy7xmgFr7mQ/edit?usp=sharing
+### Paper (05.09)
+
 …
